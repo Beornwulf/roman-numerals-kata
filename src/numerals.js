@@ -21,31 +21,31 @@ function arabicToRoman(number) {
         return false;
     }
     let output = "";
-    while (number > 49) {
+    while (number >= 50) {
         number -= 50;
         output += "L";
     }
-    while (number > 39) {
+    while (number >= 40) {
         number -= 40;
         output += "XL";
     }
-    while (number > 9) {
+    while (number >= 10) {
         number -= 10;
         output += "X";
     }
-    while (number > 8) {
+    while (number >= 9) {
         number -= 9;
         output += "IX";
     }
-    while (number > 4) {
+    while (number >= 5) {
         number -= 5;
         output += "V";
     }
-    while (number > 3) {
+    while (number >= 4) {
         number -= 4;
         output += "IV";
     }
-    while (number > 0) {
+    while (number >= 1) {
         number--;
         output += "I";
     }
