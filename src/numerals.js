@@ -14,7 +14,12 @@
  * @returns string - the formatted roman numerals
  */
 function arabicToRoman(number) {
-    return "I"
+    let output = "";
+    while (number > 0) {
+        number--;
+        output += "I";
+    }
+    return output;
 }
 
 module.exports = {
