@@ -20,34 +20,21 @@ function arabicToRoman(number) {
     if (number < 1) {
         return false;
     }
+    const numerals = {
+        "L": 50,
+        "XL": 40,
+        "X": 10,
+        "IX": 9,
+        "V": 5,
+        "IV": 4,
+        "I": 1
+    };
     let output = "";
-    while (number >= 50) {
-        number -= 50;
-        output += "L";
-    }
-    while (number >= 40) {
-        number -= 40;
-        output += "XL";
-    }
-    while (number >= 10) {
-        number -= 10;
-        output += "X";
-    }
-    while (number >= 9) {
-        number -= 9;
-        output += "IX";
-    }
-    while (number >= 5) {
-        number -= 5;
-        output += "V";
-    }
-    while (number >= 4) {
-        number -= 4;
-        output += "IV";
-    }
-    while (number >= 1) {
-        number--;
-        output += "I";
+    for (const [numeral, value] of Object.entries(numerals)) {
+        while (number >= value) {
+            number -= value;
+            output += numeral;
+        }
     }
     return output;
 }
