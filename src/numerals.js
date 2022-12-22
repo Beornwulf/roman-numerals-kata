@@ -21,6 +21,10 @@ function arabicToRoman(number) {
         return false;
     }
     let output = "";
+    while (number > 39) {
+        number -= 40;
+        output += "XL";
+    }
     while (number > 9) {
         number -= 10;
         output += "X";
