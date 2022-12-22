@@ -21,7 +21,11 @@ describe.each([
     [18, "XVIII"],
     [19, "XIX"],
     [20, "XX"],
-    [40, "XL"]
+    [40, "XL"],
+    [44, "XLIV"],
+    [45, "XLV"],
+    [49, "XLIX"],
+    [50, "L"]
 ])("correctly translates %i to numerals", (a, expected) => {
     test(`returns ${expected}`, () => {
         expect(arabicToRoman(a)).toBe(expected);
