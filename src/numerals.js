@@ -14,6 +14,12 @@
  * @returns string - the formatted roman numerals
  */
 function arabicToRoman(number) {
+    if (!Number.isInteger(number)) {
+        return false;
+    }
+    if (number < 1) {
+        return false;
+    }
     let output = "";
     while (number > 9) {
         number -= 10;
