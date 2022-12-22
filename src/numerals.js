@@ -15,6 +15,10 @@
  */
 function arabicToRoman(number) {
     let output = "";
+    while (number > 9) {
+        number -= 10;
+        output += "X";
+    }
     while (number > 8) {
         number -= 9;
         output += "IX";
